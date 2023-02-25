@@ -7,6 +7,15 @@ namespace DLPR.LicensePlateData.WebApi
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            //var appSettings = new ConfigurationBuilder()
+            //    .SetBasePath(Directory.GetCurrentDirectory())
+            //    .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+            //    .AddJsonFile($"appsettings.{builder.Environment.EnvironmentName}.json", optional: true)
+            //    .Build();
+
+            Application.DependencyResolver.DependencyResolverService.Register(builder.Services);
+            Infrastructure.DependencyResolver.DependencyResolverService.Register(builder.Services, builder.Configuration);
+
             // Add services to the container.
 
             builder.Services.AddControllers();
@@ -27,8 +36,12 @@ namespace DLPR.LicensePlateData.WebApi
 
             app.UseAuthorization();
 
-
             app.MapControllers();
+
+            using (var scope = app.Services.CreateScope())
+            {
+                Infrastructure.DependencyResolver.DependencyResolverService.MigrateDatabase(scope.ServiceProvider);
+            }
 
             app.Run();
         }

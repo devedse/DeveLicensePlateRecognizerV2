@@ -13,9 +13,10 @@ namespace DLPR.LicensePlateData.Infrastructure.DependencyResolver
         {
             services.AddDbContext<DLPRLicensePlateDbContext>(options =>
                 options.UseSqlServer("name=ConnectionStrings:DLPR_LicensePlateData_Db",
-                x => x.MigrationsAssembly("MyApp.DbMigrations")));
+                x => x.MigrationsAssembly("DLPR.LicensePlateData.DbMigrations")));
 
             services.AddScoped(typeof(IBaseRepositoryAsync<>), typeof(BaseRepositoryAsync<>));
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
         }
 
         public static void MigrateDatabase(IServiceProvider serviceProvider)

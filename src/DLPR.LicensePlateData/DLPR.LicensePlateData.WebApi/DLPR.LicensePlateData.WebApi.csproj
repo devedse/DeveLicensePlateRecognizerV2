@@ -17,6 +17,7 @@
   <ItemGroup>
     <ProjectReference Include="..\DLPR.LicensePlateData.Application\DLPR.LicensePlateData.Application.csproj" />
     <ProjectReference Include="..\DLPR.LicensePlateData.Domain\DLPR.LicensePlateData.Domain.csproj" />
+    <ProjectReference Include="..\DLPR.LicensePlateData.Infrastructure\DLPR.LicensePlateData.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
