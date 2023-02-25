@@ -17,8 +17,8 @@ namespace DLPR.LicensePlateData.DbMigrations.Migrations
                 {
                     Kenteken = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     Voertuigsoort = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Merk = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Handelsbenaming = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Merk = table.Column<string>(type: "nvarchar(450)", nullable: true),
+                    Handelsbenaming = table.Column<string>(type: "nvarchar(450)", nullable: true),
                     Vervaldatum_APK = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Datum_tenaamstelling = table.Column<DateTime>(type: "datetime2", nullable: true),
                     Bruto_BPM = table.Column<int>(type: "int", nullable: true),
@@ -112,6 +112,16 @@ namespace DLPR.LicensePlateData.DbMigrations.Migrations
                 {
                     table.PrimaryKey("PK_LicensePlates", x => x.Kenteken);
                 });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_LicensePlates_Handelsbenaming",
+                table: "LicensePlates",
+                column: "Handelsbenaming");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_LicensePlates_Merk",
+                table: "LicensePlates",
+                column: "Merk");
         }
 
         /// <inheritdoc />

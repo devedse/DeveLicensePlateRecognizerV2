@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DLPR.LicensePlateData.DbMigrations.Migrations
 {
     [DbContext(typeof(DLPRLicensePlateDbContext))]
-    [Migration("20230225220839_Initial")]
+    [Migration("20230225222006_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -133,7 +133,7 @@ namespace DLPR.LicensePlateData.DbMigrations.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Handelsbenaming")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Hoogte_voertuig")
                         .HasColumnType("nvarchar(max)");
@@ -199,7 +199,7 @@ namespace DLPR.LicensePlateData.DbMigrations.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Merk")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Openstaande_terugroepactie_indicator")
                         .HasColumnType("nvarchar(max)");
@@ -304,6 +304,10 @@ namespace DLPR.LicensePlateData.DbMigrations.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Kenteken");
+
+                    b.HasIndex("Handelsbenaming");
+
+                    b.HasIndex("Merk");
 
                     b.ToTable("LicensePlates");
                 });

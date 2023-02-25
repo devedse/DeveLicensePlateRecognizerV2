@@ -10,5 +10,14 @@ namespace DLPR.LicensePlateData.Infrastructure.Data
         public DLPRLicensePlateDbContext(DbContextOptions<DLPRLicensePlateDbContext> options) : base(options)
         {
         }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<LicensePlate>()
+                .HasIndex(t => t.Merk);
+
+            modelBuilder.Entity<LicensePlate>()
+                .HasIndex(t => t.Handelsbenaming);
+        }
     }
 }
