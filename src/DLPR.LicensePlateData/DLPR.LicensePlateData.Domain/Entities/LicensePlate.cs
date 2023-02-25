@@ -1,8 +1,9 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using DLPR.LicensePlateData.Domain.Core.Models;
+using System.ComponentModel.DataAnnotations;
 
 namespace DLPR.LicensePlateData.Domain.Entities
 {
-    public class LicensePlate
+    public class LicensePlate : BaseEntity
     {
         [Key]
         public string Kenteken { get; set; }
