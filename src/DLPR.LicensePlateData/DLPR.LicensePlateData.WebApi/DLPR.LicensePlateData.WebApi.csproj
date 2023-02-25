@@ -1,28 +1,28 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
-  <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <UserSecretsId>5654d01d-e69a-48ff-868c-a83abe768118</UserSecretsId>
-    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<UserSecretsId>5654d01d-e69a-48ff-868c-a83abe768118</UserSecretsId>
+		<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.3" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.3">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.2" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.3" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.3">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.2" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\DLPR.LicensePlateData.Application\DLPR.LicensePlateData.Application.csproj" />
-    <ProjectReference Include="..\DLPR.LicensePlateData.DbMigrations\DLPR.LicensePlateData.DbMigrations.csproj" />
-    <ProjectReference Include="..\DLPR.LicensePlateData.Domain\DLPR.LicensePlateData.Domain.csproj" />
-    <ProjectReference Include="..\DLPR.LicensePlateData.Infrastructure\DLPR.LicensePlateData.Infrastructure.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\DLPR.LicensePlateData.Application\DLPR.LicensePlateData.Application.csproj" />
+		<ProjectReference Include="..\DLPR.LicensePlateData.DbMigrations\DLPR.LicensePlateData.DbMigrations.csproj" />
+		<ProjectReference Include="..\DLPR.LicensePlateData.Domain\DLPR.LicensePlateData.Domain.csproj" />
+		<ProjectReference Include="..\DLPR.LicensePlateData.Infrastructure\DLPR.LicensePlateData.Infrastructure.csproj" />
+	</ItemGroup>
 
 </Project>
