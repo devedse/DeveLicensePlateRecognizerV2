@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33414.496
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeveLicensePlateRecognizer.Detection", "DLPR.Detection.1_VideoToRawDetections\DeveLicensePlateRecognizer.Detection.csproj", "{28733705-2705-46D7-9048-B6341482C3C9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DLPR.Detection.1_VideoToRawDetections", "DLPR.Detection.1_VideoToRawDetections\DLPR.Detection.1_VideoToRawDetections.csproj", "{BAEFD947-63FA-480B-8466-E28F2EF9F07A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DLPR.Detection.2_RawDetectionsToRawLicensePlates", "DLPR.Detection.2_RawDetectionsToRawLicensePlates\DLPR.Detection.2_RawDetectionsToRawLicensePlates.csproj", "{F62C0B50-1A0A-43D4-8DE0-078E44F40DDB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DLPR.Detection.3_RawLicensePlatesToLicensePlateDetections", "DLPR.Detection.3_RawLicensePlatesToLicensePlateDetections\DLPR.Detection.3_RawLicensePlatesToLicensePlateDetections.csproj", "{1BDAD1CD-AB75-4C0C-9178-955CBB09DDFC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +15,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{28733705-2705-46D7-9048-B6341482C3C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{28733705-2705-46D7-9048-B6341482C3C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{28733705-2705-46D7-9048-B6341482C3C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{28733705-2705-46D7-9048-B6341482C3C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAEFD947-63FA-480B-8466-E28F2EF9F07A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAEFD947-63FA-480B-8466-E28F2EF9F07A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAEFD947-63FA-480B-8466-E28F2EF9F07A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAEFD947-63FA-480B-8466-E28F2EF9F07A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F62C0B50-1A0A-43D4-8DE0-078E44F40DDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F62C0B50-1A0A-43D4-8DE0-078E44F40DDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F62C0B50-1A0A-43D4-8DE0-078E44F40DDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F62C0B50-1A0A-43D4-8DE0-078E44F40DDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BDAD1CD-AB75-4C0C-9178-955CBB09DDFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BDAD1CD-AB75-4C0C-9178-955CBB09DDFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BDAD1CD-AB75-4C0C-9178-955CBB09DDFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BDAD1CD-AB75-4C0C-9178-955CBB09DDFC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
