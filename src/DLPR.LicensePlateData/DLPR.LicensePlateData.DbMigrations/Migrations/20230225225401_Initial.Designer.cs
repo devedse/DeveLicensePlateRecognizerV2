@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DLPR.LicensePlateData.DbMigrations.Migrations
 {
     [DbContext(typeof(DLPRLicensePlateDbContext))]
-    [Migration("20230225222006_Initial")]
+    [Migration("20230225225401_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -304,6 +304,10 @@ namespace DLPR.LicensePlateData.DbMigrations.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Kenteken");
+
+                    b.HasIndex("Bruto_BPM");
+
+                    b.HasIndex("Catalogusprijs");
 
                     b.HasIndex("Handelsbenaming");
 

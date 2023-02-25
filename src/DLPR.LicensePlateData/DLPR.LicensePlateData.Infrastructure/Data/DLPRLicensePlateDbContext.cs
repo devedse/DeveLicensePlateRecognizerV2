@@ -18,6 +18,12 @@ namespace DLPR.LicensePlateData.Infrastructure.Data
 
             modelBuilder.Entity<LicensePlate>()
                 .HasIndex(t => t.Handelsbenaming);
+
+            modelBuilder.Entity<LicensePlate>()
+                .HasIndex(t => t.Catalogusprijs);
+
+            modelBuilder.Entity<LicensePlate>()
+                .HasIndex(t => t.Bruto_BPM);
         }
     }
 }

@@ -302,6 +302,10 @@ namespace DLPR.LicensePlateData.DbMigrations.Migrations
 
                     b.HasKey("Kenteken");
 
+                    b.HasIndex("Bruto_BPM");
+
+                    b.HasIndex("Catalogusprijs");
+
                     b.HasIndex("Handelsbenaming");
 
                     b.HasIndex("Merk");

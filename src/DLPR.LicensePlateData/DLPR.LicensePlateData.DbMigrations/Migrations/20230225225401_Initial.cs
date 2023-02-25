@@ -114,6 +114,16 @@ namespace DLPR.LicensePlateData.DbMigrations.Migrations
                 });
 
             migrationBuilder.CreateIndex(
+                name: "IX_LicensePlates_Bruto_BPM",
+                table: "LicensePlates",
+                column: "Bruto_BPM");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_LicensePlates_Catalogusprijs",
+                table: "LicensePlates",
+                column: "Catalogusprijs");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_LicensePlates_Handelsbenaming",
                 table: "LicensePlates",
                 column: "Handelsbenaming");
