@@ -25,6 +25,10 @@ namespace DLPR.LicensePlateData.Uploader
             {
                 return null;
             }
+            if (input.Contains(".") || input.Contains(","))
+            {
+                throw new InvalidDataException($"Trying to parse {input} as int but is actually a decimal. Pls fix");
+            }
             if (int.TryParse(input, out var result))
             {
                 return result;
@@ -52,7 +56,7 @@ namespace DLPR.LicensePlateData.Uploader
             {
                 return null;
             }
-            var retval = DateTime.ParseExact(input, "dd/MM/yyyy HH:mm:ss tt", CultureInfo.InvariantCulture);
+            var retval = DateTime.ParseExact(input, "MM/dd/yyyy hh:mm:ss tt", CultureInfo.InvariantCulture);
             return retval;
         }
 
@@ -115,7 +119,7 @@ namespace DLPR.LicensePlateData.Uploader
                 Taxi_indicator = input.Taxi_indicator,
                 Maximum_massa_samenstelling = ToInt(input.Maximum_massa_samenstelling),
                 Aantal_rolstoelplaatsen = ToInt(input.Aantal_rolstoelplaatsen),
-                Maximum_ondersteunende_snelheid = ToInt(input.Maximum_ondersteunende_snelheid),
+                Maximum_ondersteunende_snelheid = ToDecimal(input.Maximum_ondersteunende_snelheid),
                 Jaar_laatste_registratie_tellerstand = input.Jaar_laatste_registratie_tellerstand,
                 Tellerstandoordeel = input.Tellerstandoordeel,
                 Code_toelichting_tellerstandoordeel = input.Code_toelichting_tellerstandoordeel,
