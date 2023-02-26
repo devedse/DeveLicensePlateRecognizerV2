@@ -27,6 +27,10 @@ namespace DLPR.LicensePlateData.Uploader
                 {
                     var curPlates = dbContext.LicensePlates.ToList();
 
+                    if (curPlates.Any())
+                    {
+                        throw new InvalidOperationException("Database should be empty before adding license plates");
+                    }
 
 
                     using (var reader = new CsvReader(new StreamReader(@"D:\Open_Data_RDW__Gekentekende_voertuigen.csv"), CultureInfo.InvariantCulture))
